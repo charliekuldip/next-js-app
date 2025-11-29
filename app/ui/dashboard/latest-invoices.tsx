@@ -20,9 +20,10 @@ export default async function LatestInvoices({
           {latestInvoices.map((invoice, i) => {
             return (
               <div
-                key={invoice.id}
+                key={i}
+                data-invoice-id={invoice.id}
                 className={clsx(
-                  'flex flex-row items-center justify-between py-4',
+                  'flex flex-row items-center justify-between py-4 latest-invoice',
                   {
                     'border-t': i !== 0,
                   },
